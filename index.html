@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+  <div id="splash">
+  <h1>MiniPacQuest</h1>
+  <p>Arcade / Laberinto</p>
+  <button onclick="hideSplash()">Jugar</button>
+</div>
+<canvas id="gameCanvas" width="400" height="400" style="display:none"></canvas>
+<script>
+  function hideSplash() {
+    document.getElementById('splash').style.display = 'none';
+    document.getElementById('gameCanvas').style.display = 'block';
+    startGame();
+  }
+</script>
 <head>
   <meta charset="UTF-8">
   <title>MiniPacQuest</title>
@@ -12,8 +25,6 @@
     <span id="timer">Tiempo: 60</span>
     <span id="level">Nivel: 1</span>
   </div>
-  <canvas id="gameCanvas" width="400" height="400"></canvas>
-  <button id="startBtn">Start</button>
   <script src="script.js"></script>
 </body>
 </html>
